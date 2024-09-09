@@ -1,0 +1,23 @@
+@mixin border-radius($radius) {
+  border: 1px solid #ccc;
+  border-radius: $radius;
+}
+
+@mixin media-query($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin button-styles($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($background-color, 10%);
+  }
+}
